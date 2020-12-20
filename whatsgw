@@ -1,0 +1,18 @@
+## CSHARP
+
+ parâmetros  var =  novo  sistema . Coleções . Especializado . NameValueCollection ();
+var  client  =  new  System . Net . WebClient ();
+var  url  =  " https://app.whatsgw.com.br/api/WhatsGw/Send/ " ;
+
+parâmetros . Adicionar ( " apikey " , " a081498f-418a-4861-8f75-19137ab7c011 " );
+parâmetros . Adicionar ( " phone_number " , " 5581988520593 " );
+parâmetros . Adicionar ( " contact_phone_number " , " 5581988520593 " );
+parâmetros . Adicionar ( " message_custom_id " , " Panga " );
+. Adicionar ( " message_type " , " texto " );
+parâmetros . Adicionar ( " message_body " , " Teste Panga " );
+
+string  responseString  =  " " ;
+byte [] response_data ;
+
+response_data  =  cliente . UploadValues ( url , " POST " , parâmetros );
+responseString  =  UnicodeEncoding . UTF8 . GetString ( response_data );
